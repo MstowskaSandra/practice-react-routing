@@ -17,21 +17,25 @@ const App = () => {
         {url: '/task05', text: '05'},
     ]
     return (
-        <Router>
-            <nav>
-                <ul>
-                    { routes.map(item => <li key={item.url}><Link to={item.url}>{item.text}</Link></li>) }
-                </ul>
-            </nav>
-            <Switch>
-                <Route path='/task01' component={Task01}/>
-                <Route path='/task02' component={Task02}/>
-                <Route path='/task03' component={Task03}/>
-                <Route path='/task04' component={Task04}/>
-                <Route path='/task05' component={Task05}/>
-            </Switch>
-        </Router>
-    )
+      <Router>
+        <nav>
+          <ul>
+            {routes.map((item) => (
+              <li key={item.url}>
+                <Link to={item.url}>{item.text}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+        <Switch>
+          <Route path="/task01" component={Task01} />
+          <Route path="/task02" component={Task02} />
+          <Route path="/task03" component={Task03} />
+          <Route path="/task04" component={Task04} />
+          <Route path="/task05" component={Task05} />
+        </Switch>
+      </Router>
+    );
 }
 
 export default App;

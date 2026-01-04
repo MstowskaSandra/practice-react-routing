@@ -3,9 +3,11 @@ import Product from './Product';
 
 const Shop = ({products}) => {
     return (
-        <section>
-            { products.map(p => <Product {...p} />)}
-        </section>
+      <section>
+        {products.map((p) => (
+          <Product key={p.id} {...p} />
+        ))}
+      </section>
     );
 }
 
